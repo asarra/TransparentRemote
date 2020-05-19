@@ -2,7 +2,7 @@
 
 TransparentRemote switches HDMI input of the Samsung TV by sending base64 encoded commands to the web API of the TV. It also communicates with the qemu script via another web API to read the VM's state and keyboard state.
 
-I use these scripts to have an automated KVM switch. I just run my Windows 10 (Gaming) VM and that's basically it. It does all the automation.
+I use these scripts to have an automated KVM switch. I just run my Windows 10 (Gaming) VM via virsh (libvirt) and that's basically it. It does all the automation.
 
 Note:Use both ALT keys simultanously to change HDMI inputs on the TV! If you are using evdev, make sure to let it assign the keyboard to the host os (both CTRLs)!
 
