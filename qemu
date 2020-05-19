@@ -1,0 +1,25 @@
+#!/usr/bin/python
+"""
+TransparentRemote
+Copyright (C) 2020-current Mehmet-Ali Asar
+"""
+
+import sys,socket
+
+def connect(vm_name,op,myip,myport):
+    """Sends the data packages depending on the VM's state to our webserver"""
+    if vm_name=="win10" and op=="started":
+        sock=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.connect((myip,myport))
+        sock.send(b"SWITCH_HDMI")
+        sock.close()
+    elif vm_name=="win10" and op=="stopped":
+        sock=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.connect((myip,myport))
+        sock.send(b"CLOSE_FILE")
+        sock.close()
+
+try:
+    connect(sys.argv[1],sys.argv[2],socket.gethostbyname(socket.gethostname()),69)
+except:
+    pass
