@@ -18,7 +18,7 @@ class Webserver():
         self.server.bind((myip,myport))
         self.server.listen(1)
 
-    def serve():
+    def serve(self):
         """Awaits and sends the data of our hook handler client to our remote"""
         while(1):
             try:
