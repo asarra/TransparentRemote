@@ -21,3 +21,8 @@ You have to put the qemu script into the /etc/libvirt/hooks directory and the ot
 0. Make sure that you read what everything above, make sure that your win10 or whatever operating system you want to use, is ready to be started and make sure that your vm is called "win10". If it is not called win10, the software will not run as intended.
 1. Make the ./run_win10.sh file executable by writing "chmod +x ./run_win10.sh" in the CLI.
 2. Enter "./run_win10.sh" and hit enter.
+
+# Update
+
+I did restructure everything in FHS so that you can immediately use it in your file system.
+I also provided an example win10.xml.
